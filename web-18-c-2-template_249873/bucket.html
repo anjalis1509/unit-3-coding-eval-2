@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    #menu {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto;
+        gap: 10px;
+      }
+      img {
+        width: 330px;
+        height: 350px;
+      }
+      #box{
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+      }
+      #type, #price {
+        text-align: center;
+      }
+      #remove_coffee{
+        margin-left: 120px;
+        margin-bottom: 20px;
+        background-color: teal;
+        color: white;
+        border: none;
+        height: 30px;
+        width: 100px;
+        cursor: pointer;
+      }
+      #remove_coffee:hover {
+        background-color: rgb(109, 220, 24);
+        color: black;
+      }
+      #confirm_checkout{
+        margin-left: 20px;
+        margin-top: 40px;
+        background-color: teal;
+        color: white;
+        border: none;
+        height: 30px;
+        width: 100px;
+        cursor: pointer;
+      }
+      #confirm_checkout:hover {
+        background-color: rgb(109, 220, 24);
+        color: black;
+      }
+  </style>
+
+  <body>
+    <div id="total-div">
+      <h3 id="total_amount">
+        <!--Show bucket total here, do not add anything only Total value. Not even "Total - 1200Rs" but like this "1200" -->
+      </h3>
+    </div>
+    <div id="menu">
+      <!--Show all coffee added to bucket here-->
+      <!-- add an remove button to each coffee so that you can remove that item from bucket, give the button HTML id as 'remove_coffee' -->
+    </div>
+
+    <!-- checkout link  -->
+    <button id="confirm_checkout" onclick="checkout()">Checkout</button>
+  </body>
+</html>
+
+<script src="./scripts/bucket.js"></script>
